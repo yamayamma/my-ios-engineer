@@ -46,7 +46,7 @@ class ViewController2: UIViewController {
         if let owner = repositories["owner"] as? [String: Any] {
             if let imgURL = owner["avatar_url"] as? String {
                 URLSession.shared.dataTask(with: URL(string: imgURL)!) { (data, res, err) in
-                    let img = UIImage(data: data!)!
+                    let img = UIImage(data: data!)
                     DispatchQueue.main.async {
                         self.imageView.image = img
                     }
