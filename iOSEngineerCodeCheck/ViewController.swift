@@ -23,12 +23,14 @@ class ViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         SerchBar.text = "GitHubのリポジトリを検索できるよー"
+        SerchBar.searchTextField.textColor = UIColor.gray
         SerchBar.delegate = self
     }
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         // 初期テキストの削除
         searchBar.text = ""
+        SerchBar.searchTextField.textColor = UIColor.black
         return true
     }
     
